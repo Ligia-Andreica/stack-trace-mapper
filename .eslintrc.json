@@ -1,0 +1,52 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "plugins": [
+        "eslint-plugin-prettier"
+    ],
+    "extends": [
+      "eslint-config-prettier",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "prettier/prettier": "error",
+        "indent": ["error", 2],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "semi": ["error", "never"],
+        "comma-dangle": ["error", "always-multiline"],
+        "no-underscore-dangle": ["error", { "allow": ["__DEV__"] }],
+        "padded-blocks": "off",
+        "function-paren-newline": "off",
+        "object-curly-newline": "off",
+        "prefer-destructuring": ["error", {
+            "VariableDeclarator": {
+                "array": false,
+                "object": true
+            },
+            "AssignmentExpression": {
+                "array": true,
+                "object": false
+            }
+        }, {
+            "enforceForRenamedProperties": false
+        }],
+        "padding-line-between-statements": ["error", {
+            "blankLine": "always",
+            "prev": "*",
+            "next": "return"
+        }],
+        "sort-vars": ["error", {
+            "ignoreCase": true
+        }],
+        "no-multiple-empty-lines": ["error", {
+            "max": 1
+        }]
+    }
+}
